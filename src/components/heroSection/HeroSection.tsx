@@ -41,10 +41,6 @@ const HeroSection = () => {
 
   const collection = collections[23];
 
-  if (!collection || !nfts || nfts?.length === 0) {
-    return <div>No collections found</div>;
-  }
-
   const nft = nfts[23];
 
   return (
