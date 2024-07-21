@@ -34,7 +34,7 @@ const Collections = () => {
   const displayedCollections = collections.slice(0, visibleCollections);
 
   return (
-    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px]">
+    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[117px] md:px-[40px]">
       <div className="py-6">
         <h1 className="font-workSans font-semibold text-[28px] lg:text-[48px] py-2 leading-[40px] lg:leading-[45px] text-white">
           Trending Collections
@@ -49,12 +49,12 @@ const Collections = () => {
           <Link
             to={`/collection/${collection?.collection}`}
             key={index}
-            className="md:max-w-[330px] md:max-h-[525px] max-w-[315px] max-h-[505px]  rounded-[40px]"
+            className="md:max-w-[330px] md:max-h-[525px] w-full rounded-[40px]"
           >
             <img
               src={collection?.image_url || LoaderImage}
               alt={collection?.name}
-              className="rounded-[20px] bg-cover  my-4 md:w-[330px] md:h-[330px] h-[315px]"
+              className="rounded-[20px] bg-cover  my-4 md:w-[330px] md:h-[330px] h-[315px] w-full"
             />
             <div className="flex   gap-[15px]">
               <div>

@@ -44,10 +44,10 @@ const HeroSection = () => {
   const nft = nfts[23];
 
   return (
-    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px]">
+    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[117px] md:px-[40px]">
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-[30px]  ">
         <div className="">
-          <h1 className="text-[28px] font-semibold font-workSans leading-[39px] md:leading-[45px] lg:leading-[67px] md:text-[38px] lg:text-[67px] text-white">
+          <h1 className="text-[28px] max-w-[1050px] font-semibold font-workSans leading-[39px] md:leading-[45px] lg:leading-[73px] md:text-[38px] lg:text-[67px] text-white">
             Discover Digital Art & Collect NFTs
           </h1>
           <p className="text-[16px] py-2 lg:text-[22px] md:py-3  font-normal font-workSans leading-[22px] lg:leading-[35px] text-white">
@@ -91,11 +91,11 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="block w-[315px] mx-auto rounded-[20px] h-[315px] bg-secondry-bg-color md:hidden">
+        <div className="block max-w-[315px] mx-auto rounded-[20px] h-[315px] bg-secondry-bg-color md:hidden">
           <img
             src={nft?.display_image_url || LoaderImage}
             alt={nft?.name}
-            className="w-full h-[206px]  object-cover rounded-t-[20px]"
+            className=" w-[315px] h-[206px]  object-cover rounded-t-[20px]"
           />
           <div className="pt-[20px] px-[20px] ">
             <h1 className="text-[22px] font-semibold  font-workSans text-white leading-[30px]">
@@ -123,7 +123,7 @@ const HeroSection = () => {
             width100
           />
         </div>
-        <div className=" gap-[60px] md:hidden mx-auto  flex ">
+        <div className=" md:hidden  gap-[10px] flex justify-between ">
           <span className="h-[77px]">
             <h4 className="font-spaceMono  text-[22px] text-white font-bold">
               240k+
@@ -143,7 +143,7 @@ const HeroSection = () => {
             <p className="text-[16px] font-normal text-white ">Artists</p>
           </span>
         </div>
-        <div className="md:flex justify-center hidden">
+        <div className="md:flex max-w-[510px] max-h-[510px] justify-center hidden">
           <Link
             to={`/collection/${collection?.collection || "/"}`}
             className="max-h-[315px] max-w-[315px] w-full h-full rounded-[20px] bg-secondry-bg-color md:max-w-[330px] md:max-h-[330px] lg:max-w-[510px] lg:max-h-[510px]"
@@ -161,7 +161,7 @@ const HeroSection = () => {
                 <img
                   src={collection?.image_url}
                   alt={collection?.name}
-                  className="w-5 h-5 rounded-full"
+                  className="w-[24px] h-[24px] rounded-full"
                 />
                 <p className="text-white text-base font-workSans font-normal">
                   {collection?.name}

@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="md-tablet:h-[100px]   h-[54px] z-[100] w-full top-0 bg-primary-bg-color ">
-        <div className=" px-[30px] py-[15px]    md-tablet:py-[20px] flex items-center justify-between ">
+      <div className="lg:h-[100px]   h-[54px] z-[100] w-full top-0 bg-primary-bg-color ">
+        <div className=" md:px-[50px] px-[30px] py-[15px]   lg:py-[20px] lg:px-[50px] flex items-center justify-between ">
           <div className="">
             <Link to={"/"}>
               <img
@@ -21,10 +21,10 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="tablet:hidden md:flex justify-center items-center 1020:gap:[22px] gap-[11px]">
+          <div className="hidden lg:flex justify-center items-center 1020:gap:[22px] gap-[11px]">
             <span>
               <Link
-                className="text-white flex-shrink h-[46px] px-[10px] font-spaceMono py-[20px] text-base font-semibold"
+                className="text-white  flex-shrink h-[46px] px-[10px] font-spaceMono py-[20px] text-base font-semibold"
                 to={"/collections"}
               >
                 Collections
@@ -55,7 +55,7 @@ const Navbar = () => {
               border
             />
           </div>
-          <div onClick={() => setNav(!nav)} className="md:hidden tablet:block">
+          <div onClick={() => setNav(!nav)} className="lg:hidden block">
             {!nav ? (
               <HiMenuAlt3 color="white" size={30} />
             ) : (
