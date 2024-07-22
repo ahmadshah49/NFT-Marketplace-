@@ -85,7 +85,7 @@ const NftDetails = () => {
                 {nft?.collection}
               </h1>
               <p className="font-workSans py-2 font-normal lg:text-[22px] text-light text-base">
-                Creator : {nft?.creator.slice(0, 15)}...
+                Creator : {nft?.creator?.slice(0, 15)}...
               </p>
             </div>
 

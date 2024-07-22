@@ -99,7 +99,7 @@ const HeroSection = () => {
           />
           <div className="pt-[20px] px-[20px] ">
             <h1 className="text-[22px] font-semibold  font-workSans text-white leading-[30px]">
-              {nft?.name.slice(0, 20)}
+              {nft?.name?.slice(0, 10)}
             </h1>
             <div className="flex items-center gap-4 py-4">
               <img
@@ -155,7 +155,7 @@ const HeroSection = () => {
             />
             <div className="pt-[20px] px-[20px] ">
               <h1 className="text-[22px] font-semibold  font-workSans text-white leading-[30px]">
-                {nft?.name.slice(0, 20)}
+                {nft?.name?.slice(0, 10)}
               </h1>
               <div className="flex items-center gap-4 py-4">
                 <img

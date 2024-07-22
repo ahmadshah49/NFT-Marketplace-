@@ -73,25 +73,25 @@ const MoreNfts = () => {
         <NftCard
           nftSrc={nft1?.display_image_url}
           nftAlt={nft1?.name}
-          nftName={nft1?.name.slice(0, 10)}
+          nftName={nft1?.name?.slice(0, 12)}
           collectionAlt={collection1?.name}
-          collectionName={collection1?.name.slice(0, 15)}
+          collectionName={collection1?.name?.slice(0, 10)}
           collectionSrc={collection1?.image_url}
         />
         <NftCard
           nftSrc={nft2?.display_image_url}
           nftAlt={nft2?.name}
-          nftName={nft2?.name.slice(0, 12)}
+          nftName={nft2?.name?.slice(0, 12)}
           collectionAlt={collection2?.name}
-          collectionName={collection2?.name.slice(0, 10)}
+          collectionName={collection2?.name?.slice(0, 10)}
           collectionSrc={collection2?.image_url}
         />
         <NftCard
           nftSrc={nft3?.display_image_url}
           nftAlt={nft3?.name}
-          nftName={nft3?.name.slice(0, 12)}
+          nftName={nft3?.name?.slice(0, 12)}
           collectionAlt={collection3?.name}
-          collectionName={collection3?.name.slice(0, 10)}
+          collectionName={collection3?.name?.slice(0, 10)}
           collectionSrc={collection3?.image_url}
         />
       </div>
