@@ -20,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
            py-[30px]
            w-[152px]
            h-[60px]
+           text-center  
            rounded-[20px]
            flex
            justify-center

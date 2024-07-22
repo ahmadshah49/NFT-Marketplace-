@@ -1,8 +1,9 @@
-import { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../../components/loader/Loader";
 import LoaderImage from "../../assets/images/image.png";
 import ImageLoader from "../../components/imageLoader/ImageLoader";
+import Loader from "../../components/loader/Loader";
 import { useFetchNFTDetails, useNFTDetailsState } from "./useNftDetalis";
 
 const NftDetails = () => {
@@ -13,6 +14,28 @@ const NftDetails = () => {
   }>();
   const { isLoading, isError, nft } = useNFTDetailsState();
   const [isImageLoading, setIsImageLoading] = useState(true);
+  const initialTime = { hours: 2, minutes: 45, seconds: 29 };
+  const [time, setTime] = useState(initialTime);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime((prevTime) => {
+        const { hours, minutes, seconds } = prevTime;
+
+        if (seconds > 0) {
+          return { ...prevTime, seconds: seconds - 1 };
+        } else if (minutes > 0) {
+          return { hours, minutes: minutes - 1, seconds: 59 };
+        } else if (hours > 0) {
+          return { hours: hours - 1, minutes: 59, seconds: 59 };
+        } else {
+          return initialTime;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [time, initialTime]);
 
   useFetchNFTDetails(address || "", chain || "", id || "");
 
@@ -41,12 +64,12 @@ const NftDetails = () => {
   }
 
   return (
-    <div className="flex my-12 flex-wrap mt-28 items-center justify-between gap-10 mx-12 text-white">
-      <div className="w-2/5 flex justify-center items-center below-lg:w-full">
+    <div className="max-w-[1280px] mx-auto">
+      <div className="lg:max-h-[580px] md:max-h-[420px] max-h-[320px] overflow-hidden">
         {isImageLoading && <ImageLoader />}
         <img
-          src={nft?.display_image_url || LoaderImage}
-          className={`object-top border-2 p-4 border-dark-bg-color rounded-3xl object-cover max-h-full ${
+          src={nft?.image_url || LoaderImage}
+          className={`  w-full  object-cover h-full ${
             isImageLoading ? "hidden" : ""
           }`}
           alt=""
@@ -54,54 +77,106 @@ const NftDetails = () => {
           onError={handleImageError}
         />
       </div>
-      <div className="w-2/5 flex flex-col below-lg:w-full py-4">
-        <a
-          className="px-4 rounded-xl w-fit bg-primary-btn-color py-2 font-semibold text-white hover:border-b-2"
-          href={nft?.opensea_url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View on OpenSea
-        </a>
-        <p className="text-white mt-4 text-3xl font-bold">{nft?.name}</p>
-        <p className="pt-10 text-light">
-          <span className="text-xl font-bold text-white">Description:</span>
-          {nft?.description}
-        </p>
-        <p className="text-white text-xl font-bold mt-4">Details:</p>
-        <div className="mt-2 flex flex-wrap justify-between">
-          <span className="text-white">Contract Address:</span>
-          <span className="text-primary-btn-color">
-            {nft?.contract.slice(0, 15)}...
-          </span>
-        </div>
-        <div className="mt-2 flex flex-wrap justify-between">
-          <span className="text-white">Token Id:</span>
-          <span className="text-primary-btn-color">
-            {nft?.token_standard.slice(0, 15)}...
-          </span>
-        </div>
-        <div className="mt-2 flex flex-wrap justify-between">
-          <span className="text-white">Collection Name:</span>
-          <span className="text-primary-btn-color">
-            {nft?.collection.slice(0, 15)}...
-          </span>
-        </div>
-        <div className="mt-2 flex flex-wrap justify-between">
-          <span className="text-white">Identifier:</span>
-          <span className="text-primary-btn-color">
-            {nft?.identifier.slice(0, 15)}...
-          </span>
-        </div>
-        <div className="mt-2 flex flex-wrap justify-between">
-          <span className="text-white">Creator:</span>
-          <span className="text-primary-btn-color">
-            {nft?.creator.slice(0, 15)}...
-          </span>
-        </div>
-        <div className="mt-2 flex flex-wrap justify-between">
-          <span className="text-white">Last Updated:</span>
-          <span>{nft?.updated_at.slice(0, 15)}....</span>
+      <div className="py-[40px]  max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px] text-white lg:py-[80px]">
+        <div className="flex justify-between items-start">
+          <div>
+            <div className="mb-8">
+              <h1 className="font-workSans py-2 font-semibold lg:text-[51px] md:text-[38px] text-[28px]">
+                {nft?.collection}
+              </h1>
+              <p className="font-workSans py-2 font-normal lg:text-[22px] text-light text-base">
+                Creator : {nft?.creator.slice(0, 15)}...
+              </p>
+            </div>
+
+            <div className="rounded-[20px] flex md:hidden w-full  flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
+              <div>
+                <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
+                  Auction ends in:
+                </h1>
+                <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+                  {String(time.hours).padStart(2, "0")}:
+                  {String(time.minutes).padStart(2, "0")}:
+                  {String(time.seconds).padStart(2, "0")}
+                </p>
+                <button
+                  className=" 
+           px-[12px]
+           py-[30px] 
+           my-4 h-[60px]
+           text-center
+           rounded-[20px] 
+           flex
+           justify-center
+           items-center
+           gap-2
+           lg:text-base
+           max-sm:text-[12px]
+           cursor-not-allowed
+           bg-primary-btn-color
+           w-full
+           "
+                >
+                  Place Bid
+                </button>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <h1 className="font-spaceMono py-2 lg:text-[22px] text-base text-light font-normal">
+                Full Name
+              </h1>
+              <div>{nft?.name}</div>
+            </div>
+
+            <div className="mb-8">
+              <h1 className="font-spaceMono py-2 lg:text-[22px] text-base text-light font-normal">
+                Description
+              </h1>
+              <div>{nft?.description}</div>
+            </div>
+            <div className="mb-8">
+              <h1 className="font-spaceMono py-2 lg:text-[22px] text-base text-light font-normal">
+                Details
+              </h1>
+              <a href={nft?.opensea_url} target="_blank">
+                View on OpenSea
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-[20px] hidden md:flex w-full  flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
+            <div>
+              <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
+                Auction ends in:
+              </h1>
+              <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+                {String(time.hours).padStart(2, "0")}:
+                {String(time.minutes).padStart(2, "0")}:
+                {String(time.seconds).padStart(2, "0")}
+              </p>
+              <button
+                className=" 
+           px-[12px]
+           py-[30px] 
+           my-4 h-[60px]
+           text-center
+           rounded-[20px] 
+           flex
+           justify-center
+           items-center
+           gap-2
+           lg:text-base
+           max-sm:text-[12px]
+           cursor-not-allowed
+           bg-primary-btn-color
+           w-full
+           "
+              >
+                Place Bid
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
