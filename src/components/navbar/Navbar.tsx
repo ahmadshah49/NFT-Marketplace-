@@ -67,7 +67,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed md:hidden  top-0 left-0 bg-dark-bg-color w-[50%] h-[200vh] duration-1000 z-20"
+              ? "fixed md:hidden  top-0 left-0 bg-dark-bg-color w-[70%] h-[200vh] duration-1000 z-20"
               : "fixed md:hidden z-[100] top-0 left-[-100%] h-[200vh] bg-dark-bg-color w-[70%]  duration-1000"
           }
         >
