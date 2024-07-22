@@ -1,4 +1,4 @@
-import { message } from "../../constants/image";
+import { message ,pilot} from "../../constants/image";
 const WeeklyDigest = () => {
   return (
     <div className="  max-w-[1280px] mx-auto px-[30px]  lg:px-[110px] md:px-[40px] ">
@@ -6,7 +6,7 @@ const WeeklyDigest = () => {
       <div className="md:bg-secondry-bg-color text-white flex md:items-center md:flex-row flex-col items-center  justify-between md:gap-[60px] rounded-[20px] md:px-[40px] md:py-[30px] lg:p-[60px]">
         <div className=" ">
           <img
-            src="https://s3-alpha-sig.figma.com/img/9f1a/3ec9/5772f9d568933f15578613e18c5adb73?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CdLfVNuCYF7haNpYGGEqKl9LJuscmx9EyB8USdn2y9JzpmvFZR2V0AEBM99NM-NBR-QUG94~mL4U3pmbv4wbICd9hkywTImxRvNZsJBmdCgem4iWxMre4ApH5hwz9VmPH7anVC02eONTUhtoWEl18AO-5CMd20AwiRZncPgsASC6ddrewMFLclzSWXXSKFaJi7qXY4oZHXa7imNByI-VrPAKgiwXOr07rBARtkIz4Nuc9h0-wSiQLxUAhNUfixh-F0ZFs8~5CON~-s764E5K~1vruJmwej9JGBOeAON5Doh-jxh2L4Gs4hsw7dEKdQ3I7tVrOzHOwgUpqvDMDqWk7A__"
+            src={pilot}
             alt="image"
             className="lg:w-[425px] lg:h-[310px] md:w-[300px] md:h-[280px] object-cover rounded-[20px]"
           />

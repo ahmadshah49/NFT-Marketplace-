@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Button from "../button/Button";
-import { eye, shormie } from "../../constants/image";
+import { eye, mashroom, shormie } from "../../constants/image";
 
 import { useState, useEffect } from "react";
 
@@ -32,8 +32,7 @@ function Mashroom() {
     <div
       className="relative  lg:h-[640px] md:h-[630px] h-[590px] mx-auto bg-cover bg-center"
       style={{
-        backgroundImage:
-          "url('https://s3-alpha-sig.figma.com/img/a6f4/3f93/50c73503d13e1fe1a0e3277804ef1192?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=geIqUT577BJio5UAgfBhUBd3HfSJczwwIwVpxvSnIRAv7ojdusA1vwejFMam2P~HWOF36Kj0hql6HiJC0R2fRoOLQWZaa1QamwrgdirDaZkFtIhvASUJCQyfX0C47GM8X-C9Rscjegf711E-HqEm5J76Wz2lbO0~Mj~lR6ZNlzVDM9UYuSSzCpfXYA7aQtnkXDv4v-C0qmMb8F8u1Kg8amMZ62T3g739bnlhQhk01nUQQ80qP8blBj6e1Z5i~QPGeYtabCO9IhEJr9U~3TU9chhXkBeLyn89thLHqJT8wD97bQ85fdN8grwhkQUC9Zb9hiBfuy1pZ8Y8Y7reZR~Q6w__')",
+        backgroundImage: `url(${mashroom})`,
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-primary-btn-color to-transparent" />

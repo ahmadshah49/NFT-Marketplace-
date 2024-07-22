@@ -10,6 +10,9 @@ import shormie from "../assets/svg/shoormie.svg";
 import logo from "../assets/svg/Logo.svg";
 import message from "../assets/svg/EnvelopeSimple.svg";
 import nft from "../assets/svg/additionals.svg";
+import mashroom from "../assets/images/mashroom.png";
+import pilot from "../assets/images/pilot.png";
+
 export {
   one,
   two,
@@ -23,4 +26,6 @@ export {
   logo,
   message,
   nft,
+  mashroom,
+  pilot,
 };
