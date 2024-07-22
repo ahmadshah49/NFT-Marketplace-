@@ -86,12 +86,12 @@ const Nfts = () => {
                 nft?.identifier
               }`}
               key={index}
-              className=" rounded-[20px] my-4 overflow-hidden  bg-secondry-bg-color"
+              className=" shadow-lg rounded-[20px] w-full my-4 overflow-hidden  bg-secondry-bg-color"
             >
               <img
                 src={nft?.display_image_url || LoaderImage}
                 alt={nft?.name}
-                className="bg-cover rounded-t-[20px]  lg:w-[330px]  md:h-[295px]  w-[315px] h-[238px] md:w-[325px]"
+                className="bg-cover rounded-t-[20px]  object-cover  md:h-[295px]  w-full h-[238px] "
               />
               <div className="p-4 bg-primary-bg-color">
                 <p className="text-lg text-white mb-3 font-semibold">
@@ -104,7 +104,7 @@ const Nfts = () => {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center bg-secondry-bg-color">
         {visibleCollections && nfts && visibleCollections < nfts?.length && (
           <button
             onClick={handleShowMore}

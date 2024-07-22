@@ -57,18 +57,18 @@ const Collections = () => {
       </div>
 
       <div className="bg-secondry-bg-color w-full">
-        <div className="py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 md:gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
+        <div className="py-[40px] max-w-[1280px] bg-secondry-bg-color  mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 md:gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
           {displayedCollections.map((collection, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-primary-bg-color rounded-[20px] my-4 "
+              className="overflow-hidden shadow-lg  w-full rounded-[20px] my-4 "
             >
               <img
                 src={collection?.image_url || LoaderImage}
                 alt={collection?.name}
-                className="  bg-cover rounded-t-[20px]  lg:w-[330px]  md:h-[295px]  w-[315px] h-[238px] md:w-[325px]"
+                className="  bg-cover rounded-t-[20px]    md:h-[295px]  w-full h-[238px] object-cover object-center"
               />
-              <div className="p-4">
+              <div className="p-4 bg-primary-bg-color">
                 <h1 className="text-xl text-white font-semibold mb-2">
                   {collection?.name}
                 </h1>

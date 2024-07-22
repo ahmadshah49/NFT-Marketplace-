@@ -9,11 +9,11 @@ const NftCard: React.FC<NftCardProps> = ({
   nftName,
 }) => {
   return (
-    <div className="lg:max-w-[330px] lg:max-h-[469px] rounded-[20px] mx-auto overflow-hidden">
+    <div className="w-full md:max-h-[469px] rounded-[20px] mx-auto overflow-hidden">
       <img
         src={nftSrc}
         alt={nftAlt}
-        className="w-full lg:max-h-[295px]  object-cover rounded-t-[20px]"
+        className="w-full md:max-h-[295px] object-cover rounded-t-[20px]"
       />
       <div className="bg-secondry-bg-color pt-5 pb-[25px] px-6 rounded-b-[20px]">
         <h1 className="font-workSans text-lg md:text-xl lg:text-2xl font-semibold p-1">
