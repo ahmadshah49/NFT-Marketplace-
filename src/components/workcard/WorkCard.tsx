@@ -17,7 +17,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
         <h1 className="text-base md:text-base lg:text-[22px] font-workSans md:text-center text-left font-semibold text-white mb-2">
           {title}
         </h1>
-        <p className="text-xs md:text-center text-left lg:text-base  font-workSans font-normal text-white">
+        <p className="text-xs md:py-2  md:text-center text-left lg:text-base  font-workSans font-normal text-white">
           {description}
         </p>
       </div>

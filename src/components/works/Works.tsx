@@ -5,13 +5,15 @@ import Earning from "../../assets/images/earning.png";
 
 const Getstarted = () => {
   return (
-    <div className="py-10 max-w-[1280px] mx-auto px-[30px] md:py-20 lg:px-28 md:px-10">
-      <h1 className="font-workSans text-[28px] lg:text-[38px] font-semibold text-white">
-        How it works
-      </h1>
-      <p className="lg:text-[22px] text-base text-white font-normal font-workSans md:py-3 ">
-        Find out how to get started
-      </p>
+    <div className="py-10 max-w-[1280px] mx-auto px-[30px] lg:py-20 md:py-10 lg:px-28 md:px-10">
+      <div className="lg:mb-10">
+        <h1 className="font-workSans text-[28px] lg:text-[38px] font-semibold text-white">
+          How it works
+        </h1>
+        <p className="lg:text-[22px] text-base text-white font-normal font-workSans md:py-2 ">
+          Find out how to get started
+        </p>
+      </div>
       <div className="flex justify-between gap-[20px] md:gap-[30px] flex-col md:flex-row  my-4">
         <WorkCard
           src={Wallet}

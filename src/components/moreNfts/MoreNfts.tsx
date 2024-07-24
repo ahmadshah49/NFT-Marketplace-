@@ -1,10 +1,9 @@
-import Button from "../button/Button";
-import { eye } from "../../constants/image";
-import { AppDispatch, RootState } from "../../redux/store";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { eye } from "../../constants/image";
 import { fetchCollections } from "../../redux/slices/collectionsSlice";
 import { fetchSingleCollection } from "../../redux/slices/nftDetailSlice";
+import { AppDispatch, RootState } from "../../redux/store";
 import Loader from "../loader/Loader";
 import NftCard from "../nftCard/NftCard";
 
@@ -49,24 +48,20 @@ const MoreNfts = () => {
 
   return (
     <div className="py-[40px] px-[30px] max-w-[1280px] mx-auto  md:py-[80px] md:px-[40px] lg:px-[110px] text-white">
-      <div className="py-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-between">
+      <div className="my-10  flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-2xl md:text-[28px] lg:text-[38px] py-1 font-workSans font-semibold">
             Discover More NFTs
           </h1>
-          <p className="text-base md:text-lg lg:text-[22px] py-1 font-normal">
+          <p className="text-base md:text-lg lg:text-[22px] py-2 font-normal">
             Explore new trending NFTs
           </p>
         </div>
         <div className="hidden md:block">
-          <Button
-            text="See All"
-            img={eye}
-            imgAlt="see more"
-            bgTransparent
-            border
-            widthFull
-          />
+          <button className=" border-2 flex gap-2 items-center rounded-[20px] h-[60px] border-primary-btn-color px-[50px]">
+            <img src={eye} alt="See All" />
+            <p> See All</p>
+          </button>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center">

@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="">
             <Link to={"/"}>
               <img
-                className="w-[183px]   tablet:block tablet:w-[170px] md-tablet:w-[243px] "
+                className="min-w-[182px]   tablet:block tablet:w-[170px] md-tablet:w-[243px] "
                 src={logo}
                 alt="logo"
               />

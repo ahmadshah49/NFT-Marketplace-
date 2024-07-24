@@ -4,12 +4,12 @@ import { logo, message } from "../../constants/image";
 
 const Footer: React.FC = () => {
   return (
-    <div className="py-10 max-w-screen-xl  lg:px-[110px] md:px-[40px] mx-auto px-[30px] md:py-[80px]  bg-secondary-bg-color">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 ">
-        <div className="flex flex-col items-start gap-5">
-          <img src={logo} alt="logo" className="" />
+    <div className="py-10 max-w-screen-xl  lg:px-[110px] md:px-[40px] mx-auto px-[30px] md:py-[40px]  bg-secondry-bg-color mt-10">
+      <div className="flex lg:flex-row  justify-between flex-col gap-[30px] ">
+        <div className="flex flex-col lg:w-[327px]  items-start gap-5">
+          <img src={logo} alt="logo" className="lg:mb-2" />
           <p className="text-light text-base font-normal font-workSans">
-            NFT marketplace UI created with Anima for Figma
+            NFT marketplace UI created <br /> with Anima for Figma
           </p>
           <p className="text-light text-base font-normal font-workSans">
             Join our Community
@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:mx-auto items-start gap-5">
-          <h2 className="font-spaceMono font-bold text-2xl text-white">
+        <div className="flex flex-col lg:w-[240px] items-start gap-5">
+          <h2 className="font-spaceMono font-bold text-2xl lg:mb-2 text-white">
             Explore
           </h2>
           <p className="text-light text-base font-normal font-workSans">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-start gap-5">
-          <h2 className="font-spaceMono font-bold text-2xl text-white">
+          <h2 className="font-spaceMono font-bold lg:mb-2 text-2xl text-white">
             Join our weekly digest
           </h2>
           <p className="text-light text-base font-normal font-workSans">
@@ -48,11 +48,11 @@ const Footer: React.FC = () => {
             <input
               type="email"
               placeholder="Enter Your Email"
-              className="w-full px-5 py-3 border-0 rounded-l-2xl text-base font-workSans"
+              className="w-full px-5 py-4 border-0 rounded-l-2xl text-base font-workSans"
             />
-            <button className="px-8 py-3 bg-primary-btn-color rounded-[20px] text-white rounded-r-2xl font-normal text-base font-workSans">
+            <span className="px-[50px] py-4 bg-primary-btn-color rounded-[20px] text-white rounded-r-2xl font-normal text-base font-workSans">
               Subscribe
-            </button>
+            </span>
           </div>
 
           <input

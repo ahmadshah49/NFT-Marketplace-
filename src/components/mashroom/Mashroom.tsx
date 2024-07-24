@@ -37,15 +37,15 @@ function Mashroom() {
     >
       <div className="absolute inset-0 bg-gradient-to-t from-primary-btn-color to-transparent" />
       <div className="absolute w-full lg:w-[1050px] md:w-[834px] bottom-2 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2  p-4 lg:p-8 md:px-[40px] px-[30px]">
-        <span className="flex items-center gap-2 py-[10px] px-5 bg-secondry-bg-color rounded-[20px]  w-fit">
-          <img src={shormie} alt="logo" className="w-6 h-6 rounded-full " />
-          <p className="font-workSans text-base text-white font-normal">
-            Shormie
-          </p>
-        </span>
-        <div className="flex justify-between md:items-center  items-start md:flex-row flex-col">
-          <div className="">
-            <h1 className="lg:text-[51px]  font-workSans md:my-0 my-8 lg:leading-[51px] leading-[40px] text-[38px] text-5xl md:py-6   font-semibold text-white">
+        <div className="flex justify-between md:items-end  items-start md:flex-row flex-col">
+          <div className="flex flex-col justify-between lg:h-[220px]">
+            <span className="flex items-center gap-2 py-[10px] px-5 bg-secondry-bg-color rounded-[20px]  w-fit">
+              <img src={shormie} alt="logo" className="w-6 h-6 rounded-full " />
+              <p className="font-workSans text-base text-white font-normal">
+                Shormie
+              </p>
+            </span>
+            <h1 className="lg:text-[51px]  font-workSans md:my-0 my-8 lg:leading-[51px] leading-[40px] text-[38px] text-5xl lg:py-0 md:py-6   font-semibold text-white">
               Magic Mashrooms
             </h1>
             <span className="py-8 md:py-4 md:block hidden">
@@ -64,7 +64,7 @@ function Mashroom() {
               <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
                 Auction ends in:
               </h1>
-              <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+              <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl  text-3xl font-bold py-3">
                 {String(time.hours).padStart(2, "0")}:
                 {String(time.minutes).padStart(2, "0")}:
                 {String(time.seconds).padStart(2, "0")}
