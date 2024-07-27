@@ -47,7 +47,7 @@ const MoreNfts = () => {
   const nft3 = nfts[26];
 
   return (
-    <div className="py-[40px] px-[30px] max-w-[1280px] mx-auto  md:py-[80px] md:px-[40px] lg:px-[110px] text-white">
+    <div className="py-[40px] px-[30px] max-w-[1280px] mx-auto  md:py-[80px] md:px-[75px] lg:px-[110px] text-white">
       <div className="my-10  flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-2xl md:text-[28px] lg:text-[38px] py-1 font-workSans font-semibold">

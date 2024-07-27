@@ -5,7 +5,7 @@ import Earning from "../../assets/images/earning.png";
 
 const Getstarted = () => {
   return (
-    <div className="py-10 max-w-[1280px] mx-auto px-[30px] lg:py-20 md:py-10 lg:px-28 md:px-10">
+    <div className="py-10 max-w-[1280px] mx-auto px-[30px] lg:py-20 md:py-10 lg:px-28 md:px-[75px]">
       <div className="lg:mb-10">
         <h1 className="font-workSans text-[28px] lg:text-[38px] font-semibold text-white">
           How it works
@@ -14,7 +14,7 @@ const Getstarted = () => {
           Find out how to get started
         </p>
       </div>
-      <div className="flex justify-between gap-[20px] md:gap-[30px] flex-col md:flex-row  my-4">
+      <div className="flex justify-between gap-[20px] md:gap-[30px] flex-col md:flex-row  my-10">
         <WorkCard
           src={Wallet}
           alt="Wallet"

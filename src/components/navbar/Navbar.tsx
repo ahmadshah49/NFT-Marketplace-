@@ -21,7 +21,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="hidden lg:flex justify-center items-center 1020:gap:[22px] gap-[11px]">
+          <div className="hidden lg:flex justify-center items-center lg:gap-[28px] gap-[11px]">
             <span>
               <Link
                 className="text-white  flex-shrink h-[46px] px-[10px] font-spaceMono py-[20px] text-base font-semibold"

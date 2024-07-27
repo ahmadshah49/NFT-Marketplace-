@@ -34,7 +34,7 @@ const Collections = () => {
   const displayedCollections = collections.slice(0, visibleCollections);
 
   return (
-    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[40px] lg:px-[117px] md:px-[40px]">
+    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[40px] lg:px-[117px] md:px-[75px]">
       <div className="py-6">
         <h1 className="font-workSans font-semibold text-[28px] lg:text-[48px] py-2 leading-[40px] lg:leading-[45px] text-white">
           Trending Collections

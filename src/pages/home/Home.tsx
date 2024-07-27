@@ -13,7 +13,7 @@ const Home = () => {
       <HeroSection />
       <TrendingCollections />
 
-      <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] lg:py-[80px] md:py-[40px] lg:px-[117px] md:px-[40px]">
+      <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] lg:py-[80px] md:py-[40px] lg:px-[117px] md:px-[75px]">
         <h1 className="text-white font-semibold lg:text-[38px] text-[28px]  mb-6">
           Browse Categories
         </h1>

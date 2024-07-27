@@ -36,7 +36,7 @@ function Mashroom() {
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-primary-btn-color to-transparent" />
-      <div className="absolute w-full lg:w-[1050px] md:w-[834px] bottom-2 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2  p-4 lg:p-8 md:px-[40px] px-[30px]">
+      <div className="absolute w-full  bottom-2 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2   lg:px-[110px]  md:px-[75px] px-[30px]">
         <div className="flex justify-between md:items-end  items-start md:flex-row flex-col">
           <div className="flex flex-col justify-between lg:h-[220px]">
             <span className="flex items-center gap-2 py-[10px] px-5 bg-secondry-bg-color rounded-[20px]  w-fit">
