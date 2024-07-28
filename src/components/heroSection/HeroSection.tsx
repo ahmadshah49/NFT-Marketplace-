@@ -44,13 +44,13 @@ const HeroSection = () => {
   const nft = nfts[23];
 
   return (
-    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[117px] md:px-[75px]">
-      <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-[30px]  ">
+    <div className=" py-[40px] max-w-[1280px] mx-auto px-[40px] md:py-[80px] lg:px-[117px] md:px-[75px]">
+      <div className="grid grid-cols-1 lg:max-w-[1050px] md:max-w-[690px] md:grid-cols-2 mx-auto gap-[30px]  ">
         <div className="  flex flex-col lg:gap-[30px] md:gap-[20px] lg:max-w-[510px]">
           <h1 className="text-[28px] max-w-[1050px] font-semibold font-workSans leading-[39px] md:leading-[45px] lg:leading-[73px] md:text-[38px] lg:text-[67px] text-white">
             Discover Digital Art & Collect NFTs
           </h1>
-          <p className="text-[16px] lg:text-[22px]  font-normal font-workSans leading-[22px] lg:leading-[35px] text-white">
+          <p className="text-[16px] lg:text-[22px] my-4 md:my-0  font-normal font-workSans leading-[22px] lg:leading-[35px] text-white">
             NFT Marketplace UI Created With Anima for Figma. Collect, buy and
             sell art from more than 20k NFT artists.
           </p>
@@ -63,7 +63,7 @@ const HeroSection = () => {
               widthFull
             />
           </div>
-          <div className="lg:my-[30px]   gap-[30px]    md:flex hidden">
+          <div className="   gap-[30px]    md:flex hidden">
             <span className="h-[77px] lg:w-[150px] md:w-[90px]">
               <h4 className="font-spaceMono lg:text-[28px] md:text-[22px] text-white font-bold">
                 240k+
@@ -151,9 +151,9 @@ const HeroSection = () => {
             <img
               src={nft?.display_image_url || LoaderImage}
               alt={nft?.name}
-              className="md:w-[330px] md:h-[221px] lg:w-[510px] lg:h-[401px] h-[206px]  object-cover rounded-t-[20px]"
+              className="md:w-[330px] md:h-[221px] lg:w-[510px]  lg:h-[401px] h-[206px]  object-cover rounded-t-[20px]"
             />
-            <div className="pt-[20px] px-[20px] ">
+            <div className="py-[20px] px-[20px] ">
               <h1 className="text-[22px] font-semibold  font-workSans text-white leading-[30px]">
                 {nft?.name?.slice(0, 10)}
               </h1>

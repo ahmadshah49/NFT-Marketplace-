@@ -4,7 +4,7 @@ import { logo, message } from "../../constants/image";
 
 const Footer: React.FC = () => {
   return (
-    <div className="py-10 max-w-screen-xl  lg:px-[110px] md:px-[75px] mx-auto px-[30px] md:py-[40px]  bg-secondry-bg-color mt-10">
+    <div className="py-10 max-w-screen-xl  lg:px-[110px] md:px-[75px] mx-auto px-[40px] md:py-[40px]  bg-secondry-bg-color mt-10">
       <div className="flex lg:flex-row  justify-between flex-col gap-[30px] ">
         <div className="flex flex-col lg:w-[327px]  items-start gap-5">
           <img src={logo} alt="logo" className="lg:mb-2" />

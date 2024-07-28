@@ -1,7 +1,7 @@
 import { message, pilot } from "../../constants/image";
 const WeeklyDigest = () => {
   return (
-    <div className="  max-w-[1280px] mx-auto px-[30px]  lg:px-[110px] md:px-[75px] ">
+    <div className="  max-w-[1280px] mx-auto px-[40px]  lg:px-[110px] md:px-[75px] ">
       <div className="md:bg-secondry-bg-color text-white flex md:items-center md:flex-row flex-col items-center  lg:gap-[80px]  md:gap-[20px] rounded-[20px] md:px-[30px] md:py-[40px] lg:p-[60px]">
         <div className=" ">
           <img
@@ -11,7 +11,7 @@ const WeeklyDigest = () => {
           />
         </div>
         <div className="md:flex  md:flex-col lg:block lg:max-h-[272px] lg:w-[400px] md:justify-between md:h-[280px]">
-          <h1 className="font-workSans my-2 md:my-0 lg:py-1 font-bold lg:leading-[45px] text-[28px] lg:text-[38px]">
+          <h1 className="font-workSans mt-6 leading-[40px] md:my-0 lg:py-1 font-bold lg:leading-[45px] text-[28px] lg:text-[38px]">
             Join our weekly digest
           </h1>
           <p className="font-workSans my-2 md:my-0  text-base font-normal lg:py-6 text-[22px] text-">

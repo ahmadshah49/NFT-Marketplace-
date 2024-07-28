@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="">
             <Link to={"/"}>
               <img
-                className="min-w-[182px]   tablet:block tablet:w-[170px] md-tablet:w-[243px] "
+                className="lg:min-w-[243px]  max-w-[182px]  "
                 src={logo}
                 alt="logo"
               />
@@ -57,9 +57,9 @@ const Navbar = () => {
           </div>
           <div onClick={() => setNav(!nav)} className="lg:hidden block">
             {!nav ? (
-              <HiMenuAlt3 color="white" size={30} />
+              <HiMenuAlt3 color="white" size={24} />
             ) : (
-              <AiOutlineClose color="white" size={30} />
+              <AiOutlineClose color="white" size={24} />
             )}
           </div>
         </div>

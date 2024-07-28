@@ -32,7 +32,7 @@ const Collections = () => {
 
   return (
     <div className=" ">
-      <div className="py-[40px]  max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px] text-white lg:py-[80px]">
+      <div className="py-[40px]  max-w-[1280px] mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px] text-white lg:py-[80px]">
         <h1 className="font-workSans  my-2 font-semibold lg:leading-[56px]  leading-[45px] lg:text-[51px] md:text-[38px] text-[28px]">
           [Collections]
         </h1>
@@ -45,7 +45,7 @@ const Collections = () => {
         </span>
       </div>
 
-      <div className="  max-w-[1280px] mx-auto px-[30px]   pt-4  lg:px-[110px] md:px-[40px] text-white ">
+      <div className="  max-w-[1280px] mx-auto px-[40px]   pt-4  lg:px-[110px] md:px-[40px] text-white ">
         <span className="flex items-center justify-center py-4 gap-4 border-b border-light">
           <h1 className="text-white font-workSans font-semibold lg:text-[22px] text-base">
             Collections
@@ -57,7 +57,7 @@ const Collections = () => {
       </div>
 
       <div className="bg-secondry-bg-color w-full">
-        <div className="py-[40px] max-w-[1280px] bg-secondry-bg-color  mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 md:gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
+        <div className="py-[40px] max-w-[1280px] bg-secondry-bg-color  mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 md:gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
           {displayedCollections.map((collection, index) => (
             <div
               key={index}

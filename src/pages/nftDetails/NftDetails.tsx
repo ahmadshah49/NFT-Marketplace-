@@ -78,8 +78,8 @@ const NftDetails = () => {
         />
       </div>
       <div className="py-[40px]  max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px] text-white lg:py-[80px]">
-        <div className="flex justify-between items-start">
-          <div>
+        <div className="flex justify-between items-start ">
+          <div className="w-full">
             <div className="mb-8">
               <h1 className="font-workSans py-2 font-semibold lg:text-[51px] md:text-[38px] text-[28px]">
                 {nft?.collection}
@@ -89,28 +89,41 @@ const NftDetails = () => {
               </p>
             </div>
 
-            <div className="rounded-[20px] flex md:hidden w-full  flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
-              <div>
+            <div className="rounded-[20px] flex items-center   md:hidden w-full  flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
+              <div className="w-full">
                 <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
                   Auction ends in:
                 </h1>
-                <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
-                  {String(time.hours).padStart(2, "0")}:
-                  {String(time.minutes).padStart(2, "0")}:
-                  {String(time.seconds).padStart(2, "0")}
-                </p>
+                <div className="text-[38px] w-full flex justify-between  font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+                  <p className="flex flex-col">
+                    {String(time.hours).padStart(2, "0")}
+                    <span className="text-xs font-normal py-2">Hours</span>
+                  </p>
+                  <span>:</span>
+                  <p className="flex flex-col">
+                    {String(time.minutes).padStart(2, "0")}
+                    <span className="text-xs font-normal py-2">Minutes</span>
+                  </p>
+                  <span>:</span>
+                  <p className="flex flex-col">
+                    {String(time.seconds).padStart(2, "0")}
+                    <span className="text-xs font-normal py-2">Seconds</span>
+                  </p>
+                </div>
                 <button
                   className=" 
            px-[12px]
            py-[30px] 
-           my-4 h-[60px]
+           my-4 
+           h-[60px]
            text-center
            rounded-[20px] 
            flex
            justify-center
            items-center
            gap-2
-           lg:text-base
+           font-bold
+           text-base
            max-sm:text-[12px]
            cursor-not-allowed
            bg-primary-btn-color
@@ -150,11 +163,22 @@ const NftDetails = () => {
               <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
                 Auction ends in:
               </h1>
-              <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
-                {String(time.hours).padStart(2, "0")}:
-                {String(time.minutes).padStart(2, "0")}:
-                {String(time.seconds).padStart(2, "0")}
-              </p>
+              <div className="text-[38px] w-full flex justify-between  font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+                <p className="flex flex-col">
+                  {String(time.hours).padStart(2, "0")}
+                  <span className="text-xs font-normal py-2">Hours</span>
+                </p>
+                <span>:</span>
+                <p className="flex flex-col">
+                  {String(time.minutes).padStart(2, "0")}
+                  <span className="text-xs font-normal py-2">Minutes</span>
+                </p>
+                <span>:</span>
+                <p className="flex flex-col">
+                  {String(time.seconds).padStart(2, "0")}
+                  <span className="text-xs font-normal py-2">Seconds</span>
+                </p>
+              </div>
               <button
                 className=" 
            px-[12px]

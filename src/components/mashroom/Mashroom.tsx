@@ -36,7 +36,7 @@ function Mashroom() {
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-primary-btn-color to-transparent" />
-      <div className="absolute w-full  bottom-2 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2   lg:px-[110px]  md:px-[75px] px-[30px]">
+      <div className="absolute w-full  bottom-2 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2   lg:px-[110px]  md:px-[75px] px-[40px]">
         <div className="flex justify-between md:items-end  items-start md:flex-row flex-col">
           <div className="flex flex-col justify-between lg:h-[220px]">
             <span className="flex items-center gap-2 py-[10px] px-5 bg-secondry-bg-color rounded-[20px]  w-fit">
@@ -64,11 +64,22 @@ function Mashroom() {
               <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
                 Auction ends in:
               </h1>
-              <p className="lg:text-[38px] font-spaceMono leading-[45px] md:text-4xl  text-3xl font-bold py-3">
-                {String(time.hours).padStart(2, "0")}:
-                {String(time.minutes).padStart(2, "0")}:
-                {String(time.seconds).padStart(2, "0")}
-              </p>
+              <div className="text-[38px] w-full flex justify-between  font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+                <p className="flex flex-col">
+                  {String(time.hours).padStart(2, "0")}
+                  <span className="text-xs font-normal py-2">Hours</span>
+                </p>
+                <span>:</span>
+                <p className="flex flex-col">
+                  {String(time.minutes).padStart(2, "0")}
+                  <span className="text-xs font-normal py-2">Minutes</span>
+                </p>
+                <span>:</span>
+                <p className="flex flex-col">
+                  {String(time.seconds).padStart(2, "0")}
+                  <span className="text-xs font-normal py-2">Seconds</span>
+                </p>
+              </div>
             </div>
           </div>
           <span className="py-8 md:py-4 md:hidden w-full block">
