@@ -7,7 +7,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
   description,
 }) => {
   return (
-    <div className="md:gap-[30px]   bg-secondry-bg-color text-center  w-full rounded-2xl flex md:items-center items-center justify-start md:flex-col  p-[20px]">
+    <div className="md:gap-[30px]   bg-secondry-bg-color text-center   w-full rounded-2xl flex md:items-center items-center justify-start md:flex-col  p-[20px]">
       <img
         src={src}
         alt={alt}

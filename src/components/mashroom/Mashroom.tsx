@@ -59,25 +59,25 @@ function Mashroom() {
               />
             </span>
           </div>
-          <div className="rounded-[20px] w-full flex flex-col items-center justify-center  md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
+          <div className="rounded-[20px] w-full md:h-[144px] flex flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
             <div>
-              <h1 className="text-sm md:text-xs font-normal font-spaceMono text-left">
+              <h1 className="text-sm md:text-xs font-normal font-spaceMono md:mb-1 text-left">
                 Auction ends in:
               </h1>
-              <div className="text-[38px] w-full flex justify-between  font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold py-3">
+              <div className="text-[38px] w-full flex justify-between   font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold ">
                 <p className="flex flex-col">
                   {String(time.hours).padStart(2, "0")}
-                  <span className="text-xs font-normal py-2">Hours</span>
+                  <span className="text-xs font-normal py-1">Hours</span>
                 </p>
                 <span>:</span>
                 <p className="flex flex-col">
                   {String(time.minutes).padStart(2, "0")}
-                  <span className="text-xs font-normal py-2">Minutes</span>
+                  <span className="text-xs font-normal py-1">Minutes</span>
                 </p>
                 <span>:</span>
                 <p className="flex flex-col">
                   {String(time.seconds).padStart(2, "0")}
-                  <span className="text-xs font-normal py-2">Seconds</span>
+                  <span className="text-xs font-normal py-1">Seconds</span>
                 </p>
               </div>
             </div>

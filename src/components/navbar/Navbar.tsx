@@ -5,6 +5,7 @@ import userLogo from "../../assets/icons/userLogo.png";
 import Button from "../button/Button";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { eye } from "../../constants/image";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -71,7 +72,7 @@ const Navbar = () => {
               : "fixed md:hidden z-[100] top-0 left-[-100%] h-[200vh] bg-dark-bg-color w-[70%]  duration-1000"
           }
         >
-          <div className=" px-4 py-2 h-screen">
+          <div className=" px-4 py-4 h-screen">
             <div>
               <img className="w-[200px]" src={logo} alt="logo" />
             </div>
@@ -85,13 +86,10 @@ const Navbar = () => {
               </span>
             </div>
             <div className="mt-8">
-              <Button
-                img={userLogo}
-                text="Sign up"
-                imgAlt="user"
-                bgPurple
-                border
-              />
+              <button className=" border-2 flex gap-2 items-center rounded-[20px] h-[50px] bg-white px-[50px]">
+                <img src={eye} color="white" alt="See All" />
+                <p> See All</p>
+              </button>
             </div>
           </div>
         </div>

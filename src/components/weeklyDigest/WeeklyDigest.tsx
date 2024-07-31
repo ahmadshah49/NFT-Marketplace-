@@ -28,14 +28,16 @@ const WeeklyDigest = () => {
             </button>
           </div>
 
-          <input
-            type="email"
-            placeholder="Enter Your Email Address"
-            className="w-full block my-2  lg:hidden md:px-[20px] py-[10px] px-5 mt-5 border-0 rounded-[20px] text-base font-workSans"
-          />
-          <button className="px-8 py-[10px] flex items-center justify-center md:px-[20px]  gap-2  lg:hidden bg-primary-btn-color rounded-[20px] text-white w-full rounded-r-2xl font-normal text-base font-workSans">
-            <img src={message} alt="message" /> Subscribe
-          </button>
+          <div className="md:mt-0 mt-[40px]">
+            <input
+              type="email"
+              placeholder="Enter Your Email Address"
+              className="w-full block my-2  lg:hidden md:px-[20px] py-[10px] px-5  border-0 rounded-[20px] text-base font-workSans"
+            />
+            <button className="px-8 py-[10px] flex items-center justify-center md:px-[20px]  gap-2  lg:hidden bg-primary-btn-color rounded-[20px] text-white w-full rounded-r-2xl font-normal text-base font-workSans">
+              <img src={message} alt="message" /> Subscribe
+            </button>
+          </div>
         </div>
       </div>
     </div>

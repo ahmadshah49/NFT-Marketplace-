@@ -57,10 +57,10 @@ const Footer: React.FC = () => {
 
           <input
             type="email"
-            placeholder="Enter Your Email"
-            className="w-full block  md:hidden px-5 py-4 border-0 rounded-[20px] text-base font-workSans"
+            placeholder="Enter Your Email Address"
+            className="w-full block  md:hidden px-5 py-3 border-0 rounded-[20px] text-base font-workSans"
           />
-          <button className="px-8 py-4 flex items-center justify-center gap-2  md:hidden bg-primary-btn-color rounded-[20px] text-white w-full rounded-r-2xl font-normal text-base font-workSans">
+          <button className="px-8 py-3 flex items-center justify-center gap-2  md:hidden bg-primary-btn-color rounded-[20px] text-white w-full rounded-r-2xl font-normal text-base font-workSans">
             <img src={message} alt="message" /> Subscribe
           </button>
         </div>
