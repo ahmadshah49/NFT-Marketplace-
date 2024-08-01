@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import logo from "../../assets/icons/logo.png";
-import userLogo from "../../assets/icons/userLogo.png";
-import Button from "../button/Button";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { eye } from "../../constants/image";
+import { LuUser2 } from "react-icons/lu";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -22,7 +21,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="hidden lg:flex justify-center items-center lg:gap-[28px] gap-[11px]">
+          <div className="hidden lg:flex justify-center items-center lg:gap-[30px] gap-[11px]">
             <span>
               <Link
                 className="text-white  flex-shrink h-[46px] px-[10px] font-spaceMono py-[20px] text-base font-semibold"
@@ -48,13 +47,13 @@ const Navbar = () => {
               </Link>
             </span>
 
-            <Button
-              img={userLogo}
-              text="Sign up"
-              imgAlt="user"
-              bgPurple
-              border
-            />
+            <button className="  flex gap-[12px] items-center rounded-[20px] h-[60px] bg-primary-btn-color px-[30px]">
+              <LuUser2 color="white" className="size-[20px]" />
+              <p className="text-white font-workSans font-semibold text-base">
+              
+                Sign Up
+              </p>
+            </button>
           </div>
           <div onClick={() => setNav(!nav)} className="lg:hidden block">
             {!nav ? (

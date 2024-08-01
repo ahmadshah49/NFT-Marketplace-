@@ -3,6 +3,7 @@ import Button from "../button/Button";
 import { eye, mashroom, shormie } from "../../constants/image";
 
 import { useState, useEffect } from "react";
+import { MdOutlineRocketLaunch } from "react-icons/md";
 
 function Mashroom() {
   const initialTime = { hours: 2, minutes: 45, seconds: 29 };
@@ -49,14 +50,12 @@ function Mashroom() {
               Magic Mashrooms
             </h1>
             <span className="py-8 md:py-4 md:block hidden">
-              <Button
-                img={eye}
-                imgAlt="Eye"
-                bgWhite
-                textBlack
-                widthFull
-                text="See Nfts"
-              />
+              <button className="  flex gap-[12px] items-center rounded-[20px] h-[60px] bg-primary-btn-color px-[50px]">
+                <MdOutlineRocketLaunch color="white" className="size-[20px]" />
+                <p className="text-white font-workSans font-semibold text-base">
+                  Get Started
+                </p>
+              </button>
             </span>
           </div>
           <div className="rounded-[20px] w-full md:h-[144px] flex flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">

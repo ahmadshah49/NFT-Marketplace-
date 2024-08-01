@@ -2,14 +2,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { fetchCollections } from "../../redux/slices/collectionsSlice";
-// import Button from "../../components/button/Button";
 import Loader from "../loader/Loader";
-// import { Link } from "react-router-dom";
 import LoaderImage from "../../assets/images/image.png";
 import { fetchSingleCollection } from "../../redux/slices/nftDetailSlice";
-import Button from "../button/Button";
-import { rocket } from "../../constants/image";
 import { Link } from "react-router-dom";
+import { MdOutlineRocketLaunch } from "react-icons/md";
 
 const HeroSection = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -44,7 +41,7 @@ const HeroSection = () => {
   const nft = nfts[23];
 
   return (
-    <div className=" py-[40px] max-w-[1280px] mx-auto px-[40px] md:py-[80px] lg:px-[117px] md:px-[75px]">
+    <div className=" py-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[117px] md:px-[75px]">
       <div className="grid grid-cols-1 lg:max-w-[1050px] md:max-w-[690px] md:grid-cols-2 mx-auto gap-[30px]  ">
         <div className="  flex flex-col lg:gap-[30px] md:gap-[20px] lg:max-w-[510px]">
           <h1 className="text-[28px] max-w-[1050px] font-semibold font-workSans leading-[39px] md:leading-[45px] lg:leading-[73px] md:text-[38px] lg:text-[67px] text-white">
@@ -55,20 +52,19 @@ const HeroSection = () => {
             sell art from more than 20k NFT artists.
           </p>
           <div className="hidden md:block">
-            <Button
-              text="Get Started"
-              bgPurple
-              img={rocket}
-              imgAlt="get started"
-              widthFull
-            />
+            <button className="  flex gap-[12px] items-center rounded-[20px] h-[60px] bg-primary-btn-color px-[50px]">
+              <MdOutlineRocketLaunch color="white" className="size-[20px]" />
+              <p className="text-white font-workSans font-semibold text-base">
+                Get Started
+              </p>
+            </button>
           </div>
           <div className="   gap-[30px]    md:flex hidden">
-            <span className="h-[77px] lg:w-[150px] md:w-[90px]">
+            <span className="lg:h-[77px] md:h-[57px] lg:w-[150px] md:w-[90px]">
               <h4 className="font-spaceMono lg:text-[28px] md:text-[22px] text-white font-bold">
                 240k+
               </h4>
-              <p className="lg:text-[23px] md:text-[16px] font-normal text-white ">
+              <p className="lg:text-[23px] md:text-[16px] font-workSans font-normal text-white ">
                 Total Sale
               </p>
             </span>
@@ -76,7 +72,7 @@ const HeroSection = () => {
               <h4 className="font-spaceMono lg:text-[28px] md:text-[22px] text-white font-bold">
                 110k+
               </h4>
-              <p className="lg:text-[23px] md:text-[16px]  text-white ">
+              <p className="lg:text-[23px] md:text-[16px] font-workSans font-normal text-white ">
                 Auctions
               </p>
             </span>
@@ -84,7 +80,7 @@ const HeroSection = () => {
               <h4 className="font-spaceMono lg:text-[28px] md:text-[22px] text-white font-bold">
                 654k+
               </h4>
-              <p className="lg:text-[23px] md:text-[16px]  text-white ">
+              <p className="lg:text-[23px] md:text-[16px] font-workSans font-normal text-white ">
                 Artists
               </p>
             </span>
@@ -115,32 +111,37 @@ const HeroSection = () => {
         </div>
 
         <div className="md:hidden block py-3 mx-auto w-full">
-          <Button
-            text="Get Started"
-            bgPurple
-            img={rocket}
-            imgAlt="get started"
-            width100
-          />
+          <button className=" w-full  flex gap-[12px] items-center justify-center rounded-[20px] h-[60px] bg-primary-btn-color px-[50px]">
+            <MdOutlineRocketLaunch color="white" className="size-[20px]" />
+            <p className="text-white font-workSans font-semibold text-base">
+              Get Started
+            </p>
+          </button>
         </div>
         <div className=" md:hidden  gap-[10px] flex justify-between ">
           <span className="h-[77px]">
             <h4 className="font-spaceMono  text-[22px] text-white font-bold">
               240k+
             </h4>
-            <p className="text-[16px] font-normal text-white ">Total Sale</p>
+            <p className="text-[16px] font-normal text-white font-workSans">
+              Total Sale
+            </p>
           </span>
           <span className="h-[77px]">
             <h4 className="font-spaceMono  text-[22px] text-white font-bold">
               110k+
             </h4>
-            <p className="text-[16px] font-normal text-white ">Auctions</p>
+            <p className="text-[16px] font-normal text-white font-workSans">
+              Auctions
+            </p>
           </span>
           <span className="h-[77px]">
             <h4 className="font-spaceMono  text-[22px] text-white font-bold">
               654k+
             </h4>
-            <p className="text-[16px] font-normal text-white ">Artists</p>
+            <p className="text-[16px] font-normal text-white font-workSans">
+              Artists
+            </p>
           </span>
         </div>
         <div className="md:flex lg:max-w-[510px] md:max-w-[330px] md:max-h-[330px] lg:max-h-[510px] justify-center hidden">
@@ -153,11 +154,11 @@ const HeroSection = () => {
               alt={nft?.name}
               className="md:w-[330px] md:h-[221px] lg:w-[510px]  lg:h-[401px] h-[206px]  object-cover rounded-t-[20px]"
             />
-            <div className="py-[20px] px-[20px] ">
+            <div className="py-[20px] pl-[20px] ">
               <h1 className="text-[22px] font-semibold  font-workSans text-white leading-[30px]">
                 {nft?.name?.slice(0, 10)}
               </h1>
-              <div className="flex items-center gap-[12px] py-4">
+              <div className="flex items-center gap-[12px] py-2">
                 <img
                   src={collection?.image_url}
                   alt={collection?.name}

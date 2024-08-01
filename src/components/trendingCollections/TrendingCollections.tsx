@@ -34,12 +34,12 @@ const Collections = () => {
   const displayedCollections = collections.slice(0, visibleCollections);
 
   return (
-    <div className=" py-[40px] max-w-[1280px] mx-auto px-[40px] md:py-[40px] lg:px-[117px] md:px-[75px]">
-      <div className="py-6">
-        <h1 className="font-workSans font-semibold text-[28px] lg:text-[48px] py-2 leading-[40px] lg:leading-[45px] text-white">
+    <div className=" py-[40px] flex flex-col lg:gap-[60px] gap-[40px] max-w-[1280px] mx-auto px-[30px] md:py-[40px] lg:px-[117px] md:px-[75px]">
+      <div className="flex flex-col gap-[10px]">
+        <h1 className="font-workSans font-semibold text-[28px] lg:text-[38px]  leading-[40px] lg:leading-[45px] text-white">
           Trending Collections
         </h1>
-        <p className="font-workSans text-base font-normal leading-[22px] text-white">
+        <p className="font-workSans text-base lg:text-[22px] font-normal leading-[22px] text-white">
           Checkout our weekly updated trending collection.
         </p>
       </div>
@@ -49,12 +49,12 @@ const Collections = () => {
           <Link
             to={`/collection/${collection?.collection}`}
             key={index}
-            className="md:max-w-[330px] md:max-h-[525px] w-full rounded-[40px]"
+            className="md:max-w-[330px] flex flex-col gap-[15px] md:max-h-[525px] w-full rounded-[40px]"
           >
             <img
               src={collection?.image_url || LoaderImage}
               alt={collection?.name}
-              className="rounded-[20px] bg-cover  my-4 md:w-[330px] md:h-[330px] h-[315px] w-full"
+              className="rounded-[20px] bg-cover   md:w-[330px] md:h-[330px] h-[315px] w-full"
             />
             <div className="flex   gap-[15px]">
               <div>
@@ -81,8 +81,8 @@ const Collections = () => {
                 />
               </div>
             </div>
-            <div className="py-2">
-              <h1 className=" text-[22px] text-white py-3 leading-[31px] font-semibold">
+            <div className="flex flex-col gap-[10px]">
+              <h1 className=" text-[22px] text-white leading-[31px] font-semibold">
                 {collection?.name}
               </h1>
               <span className=" flex items-center gap-[12px] ">

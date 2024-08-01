@@ -47,13 +47,13 @@ const MoreNfts = () => {
   const nft3 = nfts[26];
 
   return (
-    <div className="py-[40px] px-[40px] max-w-[1280px] mx-auto  lg:py-[80px] md:py-[40px] md:px-[75px] lg:px-[110px] text-white">
-      <div className="my-10  flex flex-col md:flex-row md:items-center md:justify-between">
-        <div>
-          <h1 className="text-2xl md:text-[28px] lg:text-[38px] py-1 font-workSans font-semibold">
+    <div className="py-[40px]  flex flex-col lg:gap-[60px] gap-[40px] px-[30px] max-w-[1280px] mx-auto  lg:py-[80px] md:py-[40px] md:px-[75px] lg:px-[117px] text-white">
+      <div className="  flex lg:h-[91px]  flex-col md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-[10px]">
+          <h1 className="text-2xl md:text-[28px] lg:text-[38px]  font-workSans font-semibold">
             Discover More NFTs
           </h1>
-          <p className="text-base md:text-lg lg:text-[22px] py-1 font-normal">
+          <p className="text-base md:text-lg lg:text-[22px]  font-normal">
             Explore new trending NFTs
           </p>
         </div>
@@ -64,7 +64,7 @@ const MoreNfts = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[30px] justify-center">
         <NftCard
           nftSrc={nft1?.display_image_url}
           nftAlt={nft1?.name}

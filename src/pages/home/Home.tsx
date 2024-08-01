@@ -13,8 +13,8 @@ const Home = () => {
       <HeroSection />
       <TrendingCollections />
 
-      <div className=" py-[40px] max-w-[1280px] mx-auto px-[40px] lg:py-[80px] md:py-[40px] lg:px-[117px] md:px-[75px]">
-        <h1 className="text-white font-semibold lg:text-[38px] text-[28px]  my-9">
+      <div className=" py-[40px] flex flex-col lg:gap-[60px] gap-[40px]  max-w-[1280px] mx-auto px-[30px] lg:py-[80px] md:py-[40px] lg:px-[117px] md:px-[75px]">
+        <h1 className="text-white font-workSans font-semibold lg:text-[38px] text-[28px]  ">
           Browse Categories
         </h1>
         <div className="grid gap-[20px] md:gap-[30px] justify-center grid-cols-2 md:grid-cols-4 mx-auto">
