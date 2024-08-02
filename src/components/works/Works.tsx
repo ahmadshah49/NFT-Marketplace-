@@ -14,7 +14,7 @@ const Getstarted = () => {
           Find out how to get started
         </p>
       </div>
-      <div className="flex w-full justify-between gap-[20px] md:gap-[30px] flex-col md:flex-row  ">
+      <div className="flex lg:flex-wrap w-full justify-center gap-[20px] md:gap-[30px] flex-col md:flex-row  ">
         <WorkCard
           src={Wallet}
           alt="Wallet"

@@ -10,8 +10,8 @@ const WorkCard: React.FC<WorkCardProps> = ({
     <div
       className="
     md:gap-[30px]
-    lg:min-w-[330px]
-    lg:min-h-[438px]
+    lg:max-w-[330px]
+    lg:max-h-[438px]
   bg-secondry-bg-color
     text-center
     w-full
