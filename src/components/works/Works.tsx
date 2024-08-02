@@ -25,7 +25,7 @@ const Getstarted = () => {
           src={Collection}
           alt="Collection"
           title="Create Collection"
-          description="Upload your work and setup your collection. Add a description,  links and floor price."
+          description="Upload your work and setup your collection Share. Add a description,  links and floor price."
         />
         <WorkCard
           src={Earning}
