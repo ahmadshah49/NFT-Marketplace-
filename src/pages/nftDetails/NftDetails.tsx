@@ -71,7 +71,9 @@ const NftDetails = () => {
         {isImageLoading && <ImageLoader />}
         <img
           src={nft?.image_url || LoaderImage}
-          className={` object-cover mx-auto  ${isImageLoading ? "hidden" : ""}`}
+          className={` object-cover mx-auto w-full  ${
+            isImageLoading ? "hidden" : ""
+          }`}
           alt="Nft"
           onLoad={handleImageLoad}
           onError={handleImageError}
@@ -81,7 +83,7 @@ const NftDetails = () => {
         <div className="flex justify-between items-start">
           <div className="w-full">
             <div className="mb-8">
-              <h1 className="font-workSans py-2 font-semibold lg:text-[51px] md:text-[38px] text-[28px]">
+              <h1 className="font-workSans py-1 font-semibold lg:text-[51px] md:text-[38px] text-[28px]">
                 {nft?.collection}
               </h1>
               <p className="font-workSans py-1 font-normal lg:text-[22px] text-light text-base">
@@ -110,14 +112,14 @@ const NftDetails = () => {
                     <span className="text-xs font-normal py-2">Seconds</span>
                   </p>
                 </div>
-                <button className="px-[12px] py-[30px] my-4 h-[60px] text-center rounded-[20px] flex justify-center items-center gap-2 font-bold text-base max-sm:text-[12px] cursor-not-allowed bg-primary-btn-color w-full">
+                <button className="px-[12px] py-[30px]  h-[60px] text-center rounded-[20px] flex justify-center items-center gap-2 font-bold text-base max-sm:text-[12px] cursor-not-allowed bg-primary-btn-color w-full">
                   Place Bid
                 </button>
               </div>
             </div>
 
-            <div className="mb-8">
-              <h1 className="font-spaceMono py-4 lg:text-[22px] text-base text-light font-normal">
+            <div className="mb-8 mt-2">
+              <h1 className="font-spaceMono md:py-4 py-2 lg:text-[22px] text-base text-light font-normal">
                 Created By
               </h1>
               <div className="flex items-center gap-[12px]">

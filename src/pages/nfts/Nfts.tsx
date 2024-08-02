@@ -54,7 +54,7 @@ const Nfts = () => {
 
   return (
     <div className="">
-      <div className="py-[40px]  max-w-[1280px] mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px] text-white lg:py-[80px]">
+      <div className="py-[40px]  max-w-[1280px] mx-auto px-[30px] md:py-[80px] lg:px-[110px] md:px-[40px] text-white lg:py-[80px]">
         <h1 className="font-workSans  my-2 font-semibold lg:leading-[56px]  leading-[45px] lg:text-[51px] md:text-[38px] text-[28px]">
           [NFTs]
         </h1>
@@ -86,19 +86,37 @@ const Nfts = () => {
                 nft?.identifier
               }`}
               key={index}
-              className=" shadow-lg rounded-[20px] w-full my-4 overflow-hidden  bg-secondry-bg-color"
+              className="w-full  md:max-h-[469px] max-h-[402px] rounded-[20px] mx-auto overflow-hidden"
             >
               <img
                 src={nft?.display_image_url || LoaderImage}
                 alt={nft?.name}
-                className="bg-cover rounded-t-[20px]  object-cover  md:h-[295px]  w-full h-[238px] "
+                className=" bg-cover rounded-t-[20px]    md:min-h-[295px]  w-full h-[238px] object-cover object-center"
               />
-              <div className="p-4 bg-primary-bg-color">
-                <p className="text-lg text-white mb-3 font-semibold">
-                  {nft?.name}
-                </p>
-                <p className="text-sm text-white py-1">{nft?.collection}</p>
-                <p className="text-sm text-gray-500">{nft?.identifier}</p>
+              <div className="bg-primary-bg-color flex flex-col gap-[25px] pt-5 pb-[25px] px-6 rounded-b-[20px]">
+                <div className="flex flex-col gap-[5px]">
+                  <h1 className="font-workSans text-white text-lg md:text-xl lg:text-2xl font-semibold">
+                    {nft?.name?.slice(0, 22)}
+                  </h1>
+                </div>
+                <div className="flex justify-between ">
+                  <div>
+                    <p className="text-xs text-lightText font-workSans font-normal">
+                      Price
+                    </p>
+                    <p className="text-base font-normal text-white py-1">
+                      1.45 ETH
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-lightText font-workSans font-normal">
+                      Highest bid
+                    </p>
+                    <p className="text-base font-normal text-white py-1">
+                      0.36 ETH
+                    </p>
+                  </div>
+                </div>
               </div>
             </Link>
           ))}

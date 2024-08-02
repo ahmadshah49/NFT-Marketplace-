@@ -3,7 +3,7 @@ import Button from "../button/Button";
 import { eye, mashroom, shormie } from "../../constants/image";
 
 import { useState, useEffect } from "react";
-import { MdOutlineRocketLaunch } from "react-icons/md";
+import { IoEyeOutline } from "react-icons/io5";
 
 function Mashroom() {
   const initialTime = { hours: 2, minutes: 45, seconds: 29 };
@@ -37,30 +37,30 @@ function Mashroom() {
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-primary-btn-color to-transparent" />
-      <div className="absolute w-full  bottom-2 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2   lg:px-[110px]  md:px-[75px] px-[40px]">
+      <div className="absolute w-full  bottom-1 md:bottom-[60px] py-[30px] left-1/2 transform -translate-x-1/2   lg:px-[110px]  md:px-[75px] px-[40px]">
         <div className="flex justify-between md:items-end  items-start md:flex-row flex-col">
-          <div className="flex flex-col justify-between lg:h-[220px]">
+          <div className="flex flex-col  lg:h-[220px]">
             <span className="flex items-center gap-2 py-[10px] px-5 bg-secondry-bg-color rounded-[20px]  w-fit">
               <img src={shormie} alt="logo" className="w-6 h-6 rounded-full " />
               <p className="font-workSans text-base text-white font-normal">
                 Shormie
               </p>
             </span>
-            <h1 className="lg:text-[51px]  font-workSans md:my-0 my-8 lg:leading-[51px] leading-[40px] text-[38px] text-5xl lg:py-0 md:py-6   font-semibold text-white">
+            <h1 className="lg:text-[51px]  font-workSans mt-[30px] lg:leading-[51px] leading-[40px] text-[38px] text-5xl lg:py-0   font-semibold text-white">
               Magic Mashrooms
             </h1>
-            <span className="py-8 md:py-4 md:block hidden">
-              <button className="  flex gap-[12px] items-center rounded-[20px] h-[60px] bg-primary-btn-color px-[50px]">
-                <MdOutlineRocketLaunch color="white" className="size-[20px]" />
-                <p className="text-white font-workSans font-semibold text-base">
-                  Get Started
+            <span className=" mt-[30px] md:block hidden">
+              <button className="  flex gap-[12px] items-center  rounded-[20px] h-[60px] bg-white px-[50px]">
+                <IoEyeOutline className="size-[20px] text-primary-btn-color" />
+                <p className="text-black font-workSans font-semibold text-base">
+                  See NFT
                 </p>
               </button>
             </span>
           </div>
-          <div className="rounded-[20px] w-full md:h-[144px] flex flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
+          <div className="rounded-[20px] mt-[30px] w-full h-[144px] flex flex-col   md:max-w-[295px] bg-secondry-bg-color/60   text-white p-[30px]">
             <div>
-              <h1 className="text-sm md:text-xs font-normal font-spaceMono md:mb-1 text-left">
+              <h1 className="text-sm md:text-xs font-normal font-spaceMono md:mb-2 text-left">
                 Auction ends in:
               </h1>
               <div className="text-[38px] w-full flex justify-between   font-spaceMono leading-[45px] md:text-4xl text-3xl font-bold ">
@@ -81,7 +81,7 @@ function Mashroom() {
               </div>
             </div>
           </div>
-          <span className="py-8 md:py-4 md:hidden w-full block">
+          <span className="mt-[30px] md:py-4 md:hidden w-full block">
             <Button
               img={eye}
               imgAlt="Eye"

@@ -4,7 +4,7 @@ import { logo, message } from "../../constants/image";
 
 const Footer: React.FC = () => {
   return (
-    <div className="py-10 max-w-screen-xl  lg:px-[110px] md:px-[75px] mx-auto px-[40px] md:py-[40px]  bg-secondry-bg-color mt-10">
+    <div className="py-10 max-w-screen-xl w-full  lg:px-[110px] md:px-[75px] mx-auto px-[30px] md:py-[40px]  bg-secondry-bg-color mt-10">
       <div className="flex lg:flex-row  justify-between flex-col gap-[30px] ">
         <div className="flex flex-col lg:w-[327px]  items-start gap-5">
           <img src={logo} alt="logo" className="lg:mb-2" />
@@ -57,17 +57,17 @@ const Footer: React.FC = () => {
 
           <input
             type="email"
-            placeholder="Enter Your Email Address"
-            className="w-full block  md:hidden px-5 py-3 border-0 rounded-[20px] text-base font-workSans"
+            placeholder="Enter Your Email Here"
+            className="w-full block  md:hidden  px-5 py-3 border-0 rounded-[20px] text-base font-workSans"
           />
-          <button className="px-8 py-3 flex items-center justify-center gap-2  md:hidden bg-primary-btn-color rounded-[20px] text-white w-full rounded-r-2xl font-normal text-base font-workSans">
+          <button className="px-[50px] py-3 flex items-center justify-center gap-2  md:hidden bg-primary-btn-color rounded-[20px] text-white w-full rounded-r-2xl font-normal text-base font-workSans">
             <img src={message} alt="message" /> Subscribe
           </button>
         </div>
       </div>
       <div>
         <div className="w-full border-t-2 border-white rounded-full mt-6" />
-        <div className="mt-4 text-light text-left">
+        <div className="mt-5 text-light text-left">
           &copy; Techloset Coding Bootcamp 6.O Created by Ahmad Raza
         </div>
       </div>

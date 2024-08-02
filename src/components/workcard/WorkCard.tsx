@@ -7,17 +7,39 @@ const WorkCard: React.FC<WorkCardProps> = ({
   description,
 }) => {
   return (
-    <div className="md:gap-[30px]   bg-secondry-bg-color text-center   w-full rounded-2xl flex md:items-center items-center justify-start md:flex-col  p-[20px]">
+    <div
+      className="
+    md:gap-[30px]
+    lg:min-w-[330px]
+    lg:min-h-[438px]
+  bg-secondry-bg-color
+    text-center
+    w-full
+    rounded-2xl
+    flex
+    md:items-center
+    items-center
+    gap-[20px]
+    justify-between
+    md:justify-start
+    md:flex-col
+    md:pt-[10px]
+    lg:px-[30px]
+    md:pb-[30px]
+    md:px-[20px]
+    p-[20px]
+    "
+    >
       <img
         src={src}
         alt={alt}
-        className="w-24 h-24 lg:w-[250px] lg:h-[250px] md:w-[160px] md:h-[160px]   "
+        className="w-24 h-24 lg:w-[208px] lg:h-[208px] md:w-[160px] md:h-[160px]   "
       />
-      <div>
-        <h1 className="text-base md:text-base lg:text-[22px] font-workSans md:text-center text-left font-semibold text-white mb-2">
+      <div className="flex flex-col gap-[10px]">
+        <h1 className="text-base md:text-base lg:text-[22px] font-workSans md:text-center text-left font-semibold text-white ">
           {title}
         </h1>
-        <p className="text-xs md:py-2  md:text-center text-left lg:text-base  font-workSans font-normal text-white">
+        <p className="text-xs   md:text-center text-left lg:text-base  font-workSans font-normal text-white">
           {description}
         </p>
       </div>

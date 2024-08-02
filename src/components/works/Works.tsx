@@ -5,16 +5,16 @@ import Earning from "../../assets/images/earning.png";
 
 const Getstarted = () => {
   return (
-    <div className="py-10 max-w-[1280px] mx-auto px-[40px] lg:py-20 md:py-10 lg:px-28 md:px-[75px]">
-      <div className="lg:mb-10">
+    <div className="py-10 flex flex-col lg:gap-[48px] gap-[40px] max-w-[1280px] mx-auto px-[30px] lg:py-20 md:py-10 lg:px-28 md:px-[75px]">
+      <div className="flex flex-col gap-[10px]">
         <h1 className="font-workSans text-[28px] lg:text-[38px] font-semibold text-white">
           How it works
         </h1>
-        <p className="lg:text-[22px] text-base text-white font-normal font-workSans md:py-2 ">
+        <p className="lg:text-[22px] text-base text-white font-normal font-workSans  ">
           Find out how to get started
         </p>
       </div>
-      <div className="flex justify-between gap-[20px] md:gap-[30px] flex-col md:flex-row  my-10">
+      <div className="flex w-full justify-between gap-[20px] md:gap-[30px] flex-col md:flex-row  ">
         <WorkCard
           src={Wallet}
           alt="Wallet"
@@ -25,7 +25,7 @@ const Getstarted = () => {
           src={Collection}
           alt="Collection"
           title="Create Collection"
-          description="Upload your work and setup your collection. Add a description, social links and floor price."
+          description="Upload your work and setup your collection. Add a description,  links and floor price."
         />
         <WorkCard
           src={Earning}
