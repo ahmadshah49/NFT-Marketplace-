@@ -79,7 +79,7 @@ const Nfts = () => {
       </div>
 
       <div className="bg-secondry-bg-color w-full">
-        <div className="py-[40px] max-w-[1280px] mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 md:gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
+        <div className="py-[40px] max-w-[1280px] mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
           {displayedNfts?.map((nft, index) => (
             <Link
               to={`/nft/${contractChain(nft?.contract)}/${nft?.contract}/${

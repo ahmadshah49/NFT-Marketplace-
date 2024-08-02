@@ -46,7 +46,7 @@ const Collections = () => {
         </span>
       </div>
 
-      <div className="  max-w-[1280px] mx-auto px-[40px]   pt-4  lg:px-[110px] md:px-[40px] text-white ">
+      <div className="  max-w-[1280px] mx-auto px-[40px]  pt-4  lg:px-[110px] md:px-[40px] text-white ">
         <span className="flex items-center justify-center py-4 gap-4 border-b border-light">
           <h1 className="text-white font-workSans font-semibold lg:text-[22px] text-base">
             Collections
@@ -58,12 +58,12 @@ const Collections = () => {
       </div>
 
       <div className="bg-secondry-bg-color w-full">
-        <div className="py-[40px] max-w-[1280px] bg-secondry-bg-color  mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 md:gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
+        <div className="py-[40px]  max-w-[1280px] bg-secondry-bg-color  mx-auto px-[40px] md:py-[80px] lg:px-[110px] md:px-[40px]  grid lg:grid-cols-3 gap-[30px] md:grid-cols-2 grid-cols-1 justify-items-center">
           {displayedCollections.map((collection, index) => (
             <Link
               to={`/collection/${collection?.collection}`}
               key={index}
-              className="w-full  md:max-h-[469px] max-h-[402px] rounded-[20px] mx-auto overflow-hidden"
+              className="w-full md:max-h-[469px] max-h-[402px] rounded-[20px] mx-auto overflow-hidden"
             >
               <img
                 src={collection?.image_url || LoaderImage}
